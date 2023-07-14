@@ -5,15 +5,14 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@service": "/business/service/",
+      "@service": "/business/service",
+      "@entities": "/business/domain/entities",
       "@enums": "/business/domain/enums",
       "@config": "/config",
       "@utils": "/utils",
-      "@response": "/business/domain/entities/response/",
-      "@request": "/business/domain/entities/request/",
       "@assets": "/src/App/Assets",
       "@components": "/src/App/Components",
-      "@pages": "/src/App/Pages/",
+      "@pages": "/src/App/Pages",
       "@routes": "/src/App/Routes",
       "@store": "/src/App/Store",
     },

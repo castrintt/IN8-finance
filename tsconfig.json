@@ -21,11 +21,10 @@
     "baseUrl": ".",
     "paths": {
       "@service/*": ["business/service/*"],
+      "@entities/*": ["business/domain/entities/*"],
       "@enums/*": ["business/domain/enums/*"],
       "@config/*": ["config/*"],
       "@utils/*": ["utils/*"],
-      "@response/*": ["business/domain/entities/response/*"],
-      "@request/*": ["business/domain/entities/request/*"],
       "@assets/*": ["src/App/Assets/*"],
       "@components/*": ["src/App/Components/*"],
       "@pages/*": ["src/App/Pages/*"],

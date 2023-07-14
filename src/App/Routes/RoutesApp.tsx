@@ -11,7 +11,7 @@ const RoutesApp = () => {
     <React.Fragment>
       <Suspense fallback={<div>Carregando...</div>}>
         <Routes>
-          <Route path="/" element={<LAZY_ROUTES.Test />} />
+          <Route path="/" element={<LAZY_ROUTES.Login />} />
           <Route path="*" element={<Navigate to="/not-found" />} />
           {/* <Route
             path="/protected-ex"
