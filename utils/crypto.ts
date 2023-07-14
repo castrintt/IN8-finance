@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { devEnvironment } from "../environments/dev";
-// import { prodEnvironment } from "../environments/prod";
 import { AES, enc } from "crypto-js";
 
-const secretKey = devEnvironment.encryptSecretKey;
+const secretKey = import.meta.env.VITE_ENCRYPT_SECRET;
 
 const encryptData = (data: any): string => {
   const text = JSON.stringify(data);

@@ -2,7 +2,7 @@ import { UserModel } from "../../domain/entities/UserModel";
 
 export default interface IUserService {
   createUser(user: UserModel): boolean;
-  updateUser(user: UserModel): boolean;
-  deleteUser(name: string): boolean;
-  getUser(name: string): UserModel;
+  updateUserName(name: string): boolean;
+  deleteUser(): boolean;
+  changePassword(password: string): boolean;
 }
