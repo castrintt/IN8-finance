@@ -1,20 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import axios, {
-  AxiosInstance,
-  AxiosResponse,
-  InternalAxiosRequestConfig,
-} from "axios";
+import axios, { AxiosInstance } from "axios";
 
 interface IHeaders {
   [key: string]: string;
-}
-interface InterceptorRequestFunction {
-  (config: InternalAxiosRequestConfig<any>):
-    | InternalAxiosRequestConfig
-    | Promise<InternalAxiosRequestConfig>;
-}
-interface InterceptorResponseFunction {
-  (response: AxiosResponse): AxiosResponse | Promise<AxiosResponse>;
 }
 
 class AxiosDomain {
@@ -35,20 +23,6 @@ class AxiosDomain {
       withCredentials: this.withCredentials,
     });
   }
-
-  addRequestInterceptor(interceptor: InterceptorRequestFunction): AxiosDomain {
-    const instance = this.initInstance();
-    instance.interceptors.request.use(interceptor);
-    return this;
-  }
-
-  addResponseInterceptor(
-    interceptor: InterceptorResponseFunction
-  ): AxiosDomain {
-    const instance = this.initInstance();
-    instance.interceptors.response.use(interceptor);
-    return this;
-  }
 }
 
 export class AxiosBuilder {
@@ -68,6 +42,14 @@ export class AxiosBuilder {
     this.baseURL = url;
     return this;
   }
+
+  withDefaultHeaders(): AxiosBuilder {
+    this.headers = {
+      "Content-Type": "application/json",
+    };
+    return this;
+  }
+
   withHeaders(headers: IHeaders): AxiosBuilder {
     this.headers = headers;
     return this;
