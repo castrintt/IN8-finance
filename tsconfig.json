@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "types": ["cypress", "node"],
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext", "ES6"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": ".",
+    "paths": {
+      "@service/*": ["business/service/*"],
+      "@enums/*": ["business/domain/enums/*"],
+      "@config/*": ["config/*"],
+      "@utils/*": ["utils/*"],
+      "@response/*": ["business/domain/entities/response/*"],
+      "@request/*": ["business/domain/entities/request/*"],
+      "@assets/*": ["src/App/Assets/*"],
+      "@components/*": ["src/App/Components/*"],
+      "@pages/*": ["src/App/Pages/*"],
+      "@routes/*": ["src/App/Routes/*"],
+      "@store/*": ["src/App/Store/*"],
+    }
+  },
+  "include": [
+    "src",
+    "cypress.d.ts",
+    "cypress.d.tsx",
+    "cypress/**/*.ts",
+    "cypress/**/*.tsx",
+    "config",
+    "cypress/plugins/index.js"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
