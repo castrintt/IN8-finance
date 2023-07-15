@@ -29,7 +29,7 @@ const UseLoginController = () => {
 
   const onUserIsAuthenticated = () => {
     callToast("Login concluído com sucesso", "success");
-    navigate("/home");
+    navigate("/home/finances");
   };
 
   const onSubmit: SubmitHandler<LoginForm> = (data) => {

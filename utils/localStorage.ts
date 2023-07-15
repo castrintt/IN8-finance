@@ -15,5 +15,5 @@ export const localStorageGetCurrentUser = (): UserModel | null => {
 };
 
 export const localStorageDeleteCurrentUser = () => {
-  localStorage.deleteItem("current-user");
+  localStorage.removeItem("current-user");
 };

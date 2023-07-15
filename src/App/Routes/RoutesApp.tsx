@@ -11,11 +11,15 @@ const RoutesApp = () => {
     <React.Fragment>
       <Suspense fallback={<div>Carregando...</div>}>
         <Routes>
+          {/* PUBLIC */}
           <Route path="/" element={<LAZY_ROUTES.Login />} />
-          {Paths.map((values, index) => (
+          <Route path="/register" element={<LAZY_ROUTES.Register />} />
+
+          {/* PRIVATE */}
+          {Paths.map((mappedRoute, index) => (
             <React.Fragment key={index}>
               <Route
-                path={values.path}
+                path={mappedRoute.path}
                 element={
                   <ProtectedRoute>
                     <LAZY_ROUTES.Home />
@@ -24,10 +28,7 @@ const RoutesApp = () => {
               />
             </React.Fragment>
           ))}
-
-          <Route path="/register" element={<LAZY_ROUTES.Register />} />
-
-          {/* UNAUTHORIZE + NOTFOUND */}
+          {/* UNAUTHORIZE / NOTFOUND */}
           <Route path="unauthorize" element={<LAZY_ROUTES.Unauthorize />} />
           <Route path="*" element={<Navigate to="/not-found" />} />
           <Route path="not-found" element={<LAZY_ROUTES.NotFound />} />
