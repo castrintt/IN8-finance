@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const Container = styled.div`
   position: fixed;
-  width: 3rem;
+  width: 5rem;
   height: 100vh;
   top: 0;
   left: 0;
@@ -12,6 +12,6 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem !important;
   transition-duration: 0.2s;
 `;

@@ -23,10 +23,10 @@ export const Item = styled.div<{ selected: boolean }>`
   }
 
   svg {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: ${({ selected }) =>
       selected ? "white" : "rgba(0, 140, 255, 0.726)"};
     position: relative;
-    left: 0.5rem;
+    left: 0.66rem;
   }
 `;

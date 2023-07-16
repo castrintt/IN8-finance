@@ -1,14 +1,14 @@
 import CreateFinance from "@pages/CreateFinance/CreateFinance";
 import EditFinances from "@pages/EditFinances/EditFinances";
-import EditUser from "@pages/EditUser/EditUser";
 import Finances from "@pages/Finances/Finances";
-import ViewUser from "@pages/ViewUser/ViewUser";
+import Graphics from "@pages/Graphics/Graphics";
+import Reports from "@pages/Reports/Reports";
 
 export const Paths = [
-  { path: "/home/finances", Component: Finances },
-  { path: "/home/edit", Component: EditFinances },
-  { path: "/home/edit/:id", Component: EditFinances },
-  { path: "/home/create-new", Component: CreateFinance },
-  { path: "/home/edit-user", Component: EditUser },
-  { path: "/home/view-user", Component: ViewUser },
+  { path: "/finances", Component: Finances },
+  { path: "/create", Component: CreateFinance },
+  { path: "/edit", Component: EditFinances },
+  { path: "/edit/:id", Component: EditFinances },
+  { path: "/graphics", Component: Graphics },
+  { path: "/reports", Component: Reports },
 ];

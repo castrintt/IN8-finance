@@ -7,6 +7,8 @@ export const FinanceModelSchema = z.object({
   UpdatedAt: z.date(),
   DeletedAt: z.date().nullable(),
   Value: z.number(),
+  Category: z.string().nullable(),
+  Observation: z.string().nullable(),
 });
 
 export type FinanceModel = z.infer<typeof FinanceModelSchema>;
